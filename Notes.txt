@@ -1,0 +1,149 @@
+   // --------------------------animated view button starts here ---------------------
+   
+    <TouchableWithoutFeedback>
+          <Animated.View
+            style={[
+              styles.item,
+              opacity,
+              {
+                transform: [
+                  {
+                    translateX: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, -60],
+                    }),
+                  },
+                  {
+                    translateY: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, -50],
+                    }),
+                  },
+                ],
+              },
+            ]}>
+            {/* <Image
+                source={require("../../assets/images/Arrow_Down.png")}
+                resizeMode="contain"
+                style={styles.itemIcon}
+              />  */}
+            <MCI name="plus" size={30} style={styles.itemIcon} />
+          </Animated.View>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
+          <Animated.View
+            style={[
+              styles.item,
+              opacity,
+              {
+                transform: [
+                  {
+                    translateY: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, -100],
+                    }),
+                  },
+                ],
+              },
+            ]}>
+            {/* <Image
+              source={require('../../assets/images/Transactions.png')}
+              resizeMode="contain"
+              style={styles.itemIcon}
+            /> */}
+            <MCI name="plus" size={30} style={styles.itemIcon} />
+          </Animated.View>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
+          <Animated.View
+            style={[
+              styles.item,
+              opacity,
+              {
+                transform: [
+                  {
+                    translateX: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, 60],
+                    }),
+                  },
+                  {
+                    translateY: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, -50],
+                    }),
+                  },
+                ],
+              },
+            ]}>
+            {/* <Image
+              source={require('../../assets/images/Arrow_Top.png')}
+              resizeMode="contain"
+              style={styles.itemIcon}
+            /> */}
+            <MCI name="plus" size={30} style={styles.itemIcon} />
+          </Animated.View>
+        </TouchableWithoutFeedback>
+
+
+   // --------------------------animated view button end here ---------------------
+
+
+    <View style={styles.container}>
+      <View style={styles.box}>
+
+{/* if require animated view as three animated button , code is writted in notes.txt  paste that here*/}
+        
+    <Animated.View
+    style={[
+      styles.item,
+      opacity,
+      {
+        transform: [
+          {
+            translateX: animation.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0, 0],
+            }),
+          },
+          {
+            translateY: animation.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0, -90],
+            }),
+          },
+        ],
+      },
+    ]}
+    >
+      <Text>Credit Note</Text>
+    </Animated.View>
+
+
+        <TouchableWithoutFeedback
+          onPress={toggleOpened}
+          style={styles.addButton}>
+          <Animated.View
+            style={[
+              styles.addButtonInner,
+              {
+                transform: [
+                  {
+                    rotate: animation.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: ['0deg', '45deg'],
+                    }),
+                  },
+                ],
+              },
+            ]}>
+            {/* <Image
+              source={require('../../assets/images/Add.png')}
+              resizeMode="contain"
+              style={styles.addButtonIcon}
+            /> */}
+            <MCI name="plus" size={30} style={styles.addButtonIcon} />
+          </Animated.View>
+        </TouchableWithoutFeedback>
+      </View>
+    </View>
